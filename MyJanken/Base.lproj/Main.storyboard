@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyJanken" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Qod-9w-rLy">
+                                <rect key="frame" x="0.0" y="20" width="375" height="507"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="これからジャンケンをします！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RSO-Fv-FYM">
+                                <rect key="frame" x="0.0" y="527" width="375" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="hed-DO-S53"/>
+                                    <constraint firstAttribute="height" constant="40" id="xDO-WV-l77"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ckp-1N-qwx">
+                                <rect key="frame" x="0.0" y="567" width="375" height="100"/>
+                                <color key="backgroundColor" red="0.40000000000000002" green="0.59999999999999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="3El-6y-EXB"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="iQO-mq-m0s"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="じゃんけんをする！">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="shuffleAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ctY-GP-ElY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.3529411764705882" green="0.94901960784313721" blue="0.77647058823529413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Qod-9w-rLy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="2Z7-Eq-9ye"/>
+                            <constraint firstItem="ckp-1N-qwx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="EXp-UU-OeL"/>
+                            <constraint firstItem="RSO-Fv-FYM" firstAttribute="top" secondItem="Qod-9w-rLy" secondAttribute="bottom" id="HDL-lg-Z9F"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qod-9w-rLy" secondAttribute="trailing" id="Whh-AF-YY4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RSO-Fv-FYM" secondAttribute="trailing" id="Yr1-Mb-bch"/>
+                            <constraint firstItem="RSO-Fv-FYM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dV1-yO-9nY"/>
+                            <constraint firstItem="ckp-1N-qwx" firstAttribute="top" secondItem="RSO-Fv-FYM" secondAttribute="bottom" id="fX9-GG-ab9"/>
+                            <constraint firstItem="ckp-1N-qwx" firstAttribute="top" secondItem="RSO-Fv-FYM" secondAttribute="bottom" id="gzW-T8-X4r"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ckp-1N-qwx" secondAttribute="trailing" id="igH-TQ-S11"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ckp-1N-qwx" secondAttribute="bottom" id="n9w-qJ-d1m"/>
+                            <constraint firstItem="Qod-9w-rLy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rsl-j0-6Qk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="answerImageView" destination="Qod-9w-rLy" id="i39-eG-2Y3"/>
+                        <outlet property="answerLabel" destination="RSO-Fv-FYM" id="1hC-It-0dj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
